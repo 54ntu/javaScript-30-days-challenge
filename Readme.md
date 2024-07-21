@@ -47,3 +47,44 @@ console.log(new_arr)
 
 <p>In javascript we have built in Object.keys(object) and Object.values(object) method which returns the keys and values from the object given.....</p>
 
+
+
+# ES6 Template strings and Template literals concept
+
+<p>In ES6 module template strings and template literals concept is introduced.</p>
+<h2>Syntax for template strings is : </h2>
+
+```javascript
+
+let mystr = `....`
+//here we put the values
+```
+<p>This allows declaration and initialization of multiline string. In normal string initializing we can't assign string value in multiple line . </p>
+
+
+```javascript
+
+let mystr = "hehehhehe
+heheheheh
+hehehehe";
+console.log(mystr)
+
+//in this case we get an error
+
+//but if we use template string we can define the string in multiple line
+
+let myTemplateString = `hello
+hhiiii
+how
+`
+
+console.log(myTemplateString)
+
+
+//it also accept double quotes inside this back-ticks (``)
+
+let myNewStr = `hello how are "you"`
+
+```
+
+

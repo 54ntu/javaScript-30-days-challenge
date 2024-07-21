@@ -98,3 +98,40 @@ let myNewStr = `hello how are "you"`
     //output : Happy birthday jack. you are now 20 years old
 
 ```
+
+
+
+# Array destructuring in javascript
+
+<p>Before ES6 module when we want to fetch the data from the array, we need to access the array value by passing index value or we can call it by slicing...::::::::</p> 
+
+```javascript
+
+    let myarr = [1,2,3,4,5]
+
+    const firstNum = myarr[0]
+    const secondNum = myarr[2]
+    const thirdNum = myarr[3]
+    const fourthNum = myarr[4]
+    const fifthNum = myarr[5]
+
+```
+
+<p>After  desctructuring concept is introduced in ES6 module, it makes the programmers life much more easier and handy.....we can simple access the array value by this way:::::: </p>
+
+```javascript
+
+    let myarr = [1,2,3,4,5]
+
+    const [num1,num2,num3,num4,num5] = myarr
+    console.log(num1)
+    console.log(num2)
+    console.log(num3)
+    console.log(num4)
+    console.log(num5)
+
+
+
+```
+
+

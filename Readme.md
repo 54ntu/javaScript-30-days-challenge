@@ -87,4 +87,14 @@ let myNewStr = `hello how are "you"`
 
 ```
 
+# string interpolation
+<p>With the help of ES6 template string, the string interpolation concept has been introduced.....It makes easier to inject the value along with the string values.for ex: </p>
 
+```javascript
+    let name ="jack"
+    let age = 20
+    console.log(` Happy birthday ${name}. you are now ${age} years old`)
+
+    //output : Happy birthday jack. you are now 20 years old
+
+```

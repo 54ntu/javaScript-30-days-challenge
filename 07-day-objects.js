@@ -3,11 +3,11 @@
 // //activity 1: object creation and access
 
 // //task 1: create an object representing a book with properties like title, author, and year and log the object to the console.
-// let book = {
-//     "title":"rich dad poor dad",
-//     "author":"Robert T kiyosaki",
-//     "year":2000
-// }
+let book = {
+    "title":"rich dad poor dad",
+    "author":"Robert T kiyosaki",
+    "year":2000
+}
 
 
 // console.log(typeof(book))
@@ -77,3 +77,36 @@ book1.map(mybook=>
     console.log(mybook.title)
 )
 
+//Activity 4: the "this" keyword
+
+//task 7: add a method to the book object that uses the this keyword to return a string with the book's title and year, and log the result  of calling this method.
+
+const book2={
+    newFunc :function() {
+        return ` new one : ${this.title} ---${this.year}`
+        
+    }
+}
+
+
+console.log(book2.newFunc.call(book))
+
+
+
+//Activity 5: object iteration:
+
+//task 8: use a for...in loop to iterate over the properties of the book object and log each peroperty and its value.
+
+
+for ( let x in book){
+    console.log(`${x}--${book[x]}`)
+}
+
+
+//task 9: use object.keys and object.values methods to log all the keys and values of the book object.
+
+let keys = Object.keys(book)
+console.log(`keys of the book object are : ${keys}`)
+let values = Object.values(book);
+
+console.log(`values of the book object are : ${values}`);

@@ -42,3 +42,8 @@ const new_arr = arr[arr.length-1]
 console.log(new_arr)
 
 ```
+
+
+
+<p>In javascript we have built in Object.keys(object) and Object.values(object) method which returns the keys and values from the object given.....</p>
+

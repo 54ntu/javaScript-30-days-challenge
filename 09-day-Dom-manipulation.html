@@ -1,0 +1,62 @@
+<!-- //Day 9: DOM manipulation
+//tasks/Activities:
+
+//Activity 1: select an HTML element by its ID and change its text content -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .text-btn {
+        background-color: rgb(82, 224, 224);
+        padding: 5px;
+        font-size: 20px;
+        font-weight: bold;
+        border-radius: 5px;
+      }
+      .main-div {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 20px;
+        gap: 50px;
+      }
+      .bg-clas{
+        height: 400px;
+        width: 400px;
+        background-color: burlywood;
+        text-align: center;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        justify-items: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="main-div">
+      <div>
+        <h2 id="myid">This one is dom manipulation example....</h2>
+        <button class="text-btn" onclick="changeText()">Change Text</button>
+      </div>
+      <div  class="bg-clas"><h3">I am going to change bg of this div :</h3></div>
+      <button onclick="changeColorAndText()">Chnage Color</button>
+    </div>
+
+    <script>
+        function changeText() {
+          document.getElementById("myid").innerHTML = "Date : " + Date();
+        }
+
+        function changeColorAndText(){
+            let element = document.getElementsByClassName('bg-clas')
+            for(let i=0;i<element.length;i++){
+                element[i].style.color = "red"
+                element[i].style.backgroundColor="black"
+            }
+        }
+    </script>
+  </body>
+</html>

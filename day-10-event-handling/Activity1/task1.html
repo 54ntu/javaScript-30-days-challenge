@@ -1,0 +1,25 @@
+<!-- //add a click event listener to a button that changes the text content of a paragraph. -->
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Evenet handling</title>
+</head>
+<body>
+    <p class="para">Lorem ipsum dolor sit.</p>
+    <button onclick="changeText()">change text of para</button>
+    <script>
+        function changeText(){
+            const p = document.querySelector(".para")
+            //const p = document.getElementByClassName('para')
+            p.innerHTML= "this one is updated Text!!!!"
+            p.style.color="red"
+
+        }
+    </script>
+</body>
+</html>

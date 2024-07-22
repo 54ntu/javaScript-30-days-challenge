@@ -1,0 +1,27 @@
+<!-- add a double-click event listener to an image that toggles its visibility
+  -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="myimg">
+      <img src="../../mine.jpg" alt="" />
+    </div>
+    <button ondblclick="toggleImage()">Click me</button>
+    <script>
+        function toggleImage(){
+            const img = document.getElementById('myimg')
+            if(img.style.visibility==="visible"){
+                img.style.visibility ="hidden"
+            }else{
+                img.style.visibility ="visible"
+            }
+        }
+    </script>
+  </body>
+</html>

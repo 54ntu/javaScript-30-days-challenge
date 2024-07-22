@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .removecss{
+            background-color: antiquewhite;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <p>task 8 add and remove a css class to /from and HTML element</p>
+        <h2 class="hello">hello</h2>
+        <h3 class="removecss">remove css class</h3>
+    </div>
+    <script>
+            //add css property
+           const h2=  document.querySelector(".hello")
+           h2.style.color="red"
+           h2.style.backgroundColor ="yellow"
+
+
+
+            //remove css property
+            const removecss = document.querySelector(".removecss") 
+            removecss.remove()
+
+    </script>
+</body>
+</html>

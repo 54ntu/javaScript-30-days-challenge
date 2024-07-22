@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>dom manipulation</title>
+  </head>
+  <body>
+    <h1>create a new 'li' element and add it to an existing 'ul' list</h1>
+    <div>
+      <ul class="language">
+        <li>Golang</li>
+      </ul>
+    </div>
+    <script>
+      function addLanguage(langName) {
+        const li = document.createElement("li");
+        li.appendChild(document.createTextNode(langName))
+
+        document.querySelector(".language").appendChild(li)
+      }
+      addLanguage("Python")
+      addLanguage("Javascript")
+      addLanguage("Typescript")
+      
+
+
+      //edit 
+
+      const secondli= document.querySelector("li:nth-child(2)")
+      console.log(secondli)
+      const newli = document.createElement("li")
+      newli.appendChild(document.createTextNode("django"))
+      secondli.replaceWith(newli)
+
+
+      //remove
+
+      const firstli = document.querySelector("li:first-child")
+      console.log(firstli)
+      firstli.remove()
+
+    </script>
+  </body>
+</html>

@@ -1,0 +1,34 @@
+<!-- //activity 2: creating and appending elements
+
+//Task 3: create a new div element with some text content and append it to the body -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DOM</title>
+  </head>
+  <body>
+    <div>
+      <h1>
+        here we are going to insert new div element with some text content and
+        append it to the body....!!!!!
+      </h1>
+    </div>
+    <button onclick="createNewElement('this one is new element value',color='red')">Add new element</button>
+
+    <script>
+      function createNewElement(text,color) {
+        const div = document.createElement("div");
+        console.log(div);
+        div.className = "newdiv";
+        div.id = "newid";
+        div.style.backgroundColor = color;
+        div.style.padding = "10px";
+        div.innerText =text
+        document.body.appendChild(div);
+      }
+    </script>
+  </body>
+</html>

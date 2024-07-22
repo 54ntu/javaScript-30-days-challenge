@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .testclass {
+        height: 200px;
+        width: 200px;
+        background-color: aquamarine;
+        margin: 20px auto;
+      }
+      .main-div{
+        margin: 20px auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="main-div">
+      <div class="testclass">
+        <h2>hello this one is test doc....</h2>
+      </div>
+
+      <button onclick="changeBgText()">change bg and text color</button>
+    </div>
+
+    <script>
+      function changeBgText() {
+        let data = document.getElementsByClassName("testclass");
+       for(let i =0;i<data.length;i++){
+        data[i].style.color="red"
+        data[i].style.backgroundColor='yellow'
+       }
+      }
+    </script>
+  </body>
+</html>

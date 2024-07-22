@@ -1,0 +1,32 @@
+<!-- add a mouseover event listener to an element that changes its background color  -->
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .first-div{
+            height: 200px;
+            width: 300px;
+            background-color: gold;
+            margin: 0 auto;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="first-div" onmouseover="myFunc(this)">
+
+    </div>
+    <script>
+        function myFunc(x){
+            x.style.backgroundColor="red"
+            x.style.cursor="pointer"
+        }
+    </script>
+</body>
+</html>

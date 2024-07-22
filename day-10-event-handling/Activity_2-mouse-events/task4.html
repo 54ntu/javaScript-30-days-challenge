@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .first-div{
+            height: 200px;
+            width: 300px;
+            background-color: blueviolet;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+<body>
+    <h2>Add a mouseout event listener to an element that resets its background color</h2>
+
+    <div class="first-div" onmouseover="myFunc(this)" onmouseout="myFunct(this)">
+
+    </div>
+<script>
+    function myFunc(x){
+        x.style.backgroundColor ='red'
+        x.style.cursor= "pointer"
+    }
+    function myFunct(x){
+        x.style.backgroundColor ='blueviolet'
+        x.style.cursor = "pointer"
+    }
+</script>    
+</body>
+</html>

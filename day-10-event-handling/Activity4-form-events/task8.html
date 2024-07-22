@@ -1,0 +1,37 @@
+<!--add a change event listener to a select dropdown that dislays the selected value in a paragraph.-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dropdown Event</title>
+    <style>
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 50px;
+        }
+        select, p {
+            margin: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <select id="myDropdown">
+            <option value="Option 1">Option 1</option>
+            <option value="Option 2">Option 2</option>
+            <option value="Option 3">Option 3</option>
+        </select>
+        <p id="selectedValue">Selected value will be displayed here.</p>
+    </div>
+
+    <script>
+        document.getElementById('myDropdown').addEventListener('change', function() {
+            const selectedValue = this.value;
+            document.getElementById('selectedValue').textContent = `Selected Value: ${selectedValue}`;
+        });
+    </script>
+</body>
+</html>

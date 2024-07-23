@@ -51,7 +51,9 @@ console.log(num5);
 
 //Task 6 ;try reassigning a variable declared with const and observe the error
 
-const test = "hello"
-test = "lol"
+// const test = "hello"
+// test = "lol"
 
-console.log(test)
+// console.log(test)
+
+

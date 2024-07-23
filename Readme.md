@@ -135,3 +135,15 @@ let myNewStr = `hello how are "you"`
 ```
 
 
+# Event Delegation in Javascript
+<p>Event delegation in javascript consists of three main phases:::::</p>
+<ul>
+    <li>Event capturing</li>
+    <li>Event target</li>
+    <li>Event bubbling</li>
+
+</ul>
+
+# Event Capturing
+
+<p> Event capturing is when the event pass down to the element , event target is when the event reach the element and event bubbling is when the event moves upward from the element </p>

@@ -1,2 +1,31 @@
 <!-- add a click event listener to a list that logs the text content of the clicked list item using event delegation. -->
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event delegation example</title>
+</head>
+<body>
+    
+    <ul id="mylist">
+        <li>item 1</li>
+        <li>item 2</li>
+        <li>item 3</li>
+        <li>item 4</li>
+        <li>item 5</li>
+
+    </ul>
+
+
+    <script>
+        document.getElementById('mylist').addEventListener('click',function(event)
+        {
+            if(event.target && event.target.nodeName==="LI"){
+                console.log("list item text : ",event.target.textContent)
+            }
+        })
+    </script>
+</body>
+</html>

@@ -11,3 +11,6 @@ const myPromise = new Promise((resolve,reject)=>{
 myPromise.then((message)=>{
     console.log(message)
 })
+
+
+console.log("user email is setup")

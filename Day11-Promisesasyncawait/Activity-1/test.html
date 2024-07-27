@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event propogation</title>
+    <style>
+        .main-div{
+            background-color: bisque;
+            height: 400px;
+            width: 400px;
+            margin: 20px auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 5px;
+        }
+        .first-div{
+            height: 100px;
+            width: 100px;
+            background-color: blue;
+            color: white;
+        }
+        .second-div{
+            height: 100px;
+            width: 100px;
+            background-color: red;
+            color: white;
+            margin-top: 5px;
+        }.third-div{
+            height: 100px;
+            width: 100px;
+            background-color:green;
+            color: white;
+            margin-top: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h2>this one is an example to demonstrate event bubbling in javascript</h2>
+    <div class="main-div">
+        <div class="first-div"> first div</div>
+        <div class="second-div">second div</div>
+        <div class="third-div">third div</div>
+
+    </div>
+
+    
+</body>
+<script>
+    document.querySelector(".main-div").addEventListener('click',function(){
+        console.log('clicked inside the main div')
+    },false)
+
+
+    document.querySelector(".third-div").addEventListener('click',function(){
+        console.log('clicked inside the third div')
+    },false)
+</script>
+</html>

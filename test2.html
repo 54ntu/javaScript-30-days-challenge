@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .main-div {
+        height: 500px;
+        width: 500px;
+        background-color: bisque;
+        margin: 20px auto;
+        border-radius: 10px;
+        position: relative;
+      }
+
+      .circle {
+        width: 100px;
+        height: 100px;
+        background-color: red;
+        border-radius: 50%;
+        position: absolute;
+      }
+    </style>
+  </head>
+
+  <body>
+    <h2>
+      Create an application where clicking inside a div creates a circle at the
+      clicked point.
+    </h2>
+    <div class="main-div"></div>
+  </body>
+  <script>
+    document.querySelector(".main-div").addEventListener("click", function (e) {
+      const circle = document.createElement("div");
+      circle.classList.add("circle");
+
+      // Get the position of the click relative to the main-div
+      const rect = e.target.getBoundingClientRect();
+      const x = e.clientX - rect.left - 10; // Adjust for circle radius
+      const y = e.clientY - rect.top - 10; // Adjust for circle radius
+
+      // Set the position of the circle
+      circle.style.left = `${x}px`;
+      circle.style.top = `${y}px`;
+
+      // Append the circle to the main-div
+      e.target.appendChild(circle);
+    });
+  </script>
+</html>

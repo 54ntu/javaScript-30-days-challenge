@@ -135,7 +135,7 @@ let myNewStr = `hello how are "you"`
 ```
 
 
-# Event Delegation in Javascript
+# Event Delegation/propagation in Javascript
 <p>Event delegation in javascript consists of three main phases:::::</p>
 <ul>
     <li>Event capturing</li>
@@ -147,3 +147,73 @@ let myNewStr = `hello how are "you"`
 # Event Capturing
 
 <p> Event capturing is when the event pass down to the element , event target is when the event reach the element and event bubbling is when the event moves upward from the element </p>
+
+# example to demonstrate event propagation in javascript
+
+```javascript
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event propogation</title>
+    <style>
+        .main-div{
+            background-color: bisque;
+            height: 400px;
+            width: 400px;
+            margin: 20px auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 5px;
+        }
+        .first-div{
+            height: 100px;
+            width: 100px;
+            background-color: blue;
+            color: white;
+        }
+        .second-div{
+            height: 100px;
+            width: 100px;
+            background-color: red;
+            color: white;
+            margin-top: 5px;
+        }.third-div{
+            height: 100px;
+            width: 100px;
+            background-color:green;
+            color: white;
+            margin-top: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h2>this one is an example to demonstrate event bubbling in javascript</h2>
+    <div class="main-div">
+        <div class="first-div"> first div</div>
+        <div class="second-div">second div</div>
+        <div class="third-div">third div</div>
+
+    </div>
+
+    
+</body>
+<script>
+    document.querySelector(".main-div").addEventListener('click',function(){
+        console.log('clicked inside the main div')
+    },true)
+
+
+    document.querySelector(".third-div").addEventListener('click',function(){
+        console.log('clicked inside the third div')
+    },true)
+</script>
+</html>
+
+
+```
+
+<h2> Notes: third parameter inside the addEventlistener is for event propagation. By default we uses event bubbling which means the third parameter is false by default and we can explicitly gives false as a third parameter. If we change the third parameter to true, then it represents event capturing which means execution of the programs from top to the down...</h2>

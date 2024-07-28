@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .main-div {
+        height: 200px;
+        width: 200px;
+        background-color: bisque;
+        margin: 20px auto;
+        border-radius: 10px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <h2>
+      create an application where when the user click on any image or div then
+      it should display time of click into that element....
+    </h2>
+    <div class="main-div"></div>
+  </body>
+  <script>
+    document.querySelector(".main-div").addEventListener(
+      "click",
+      function (e) {
+       const date = new Date();
+       const hours = date.getHours()
+       const minutes = date.getMinutes()
+       const seconds = date.getSeconds()
+       const formatted_time = `${hours}/${minutes}/${seconds}`
+    //    console.log(formatted_time)
+
+    e.target.innerHTML = formatted_time;
+
+      },
+      false
+    );
+
+
+  </script>
+</html>
